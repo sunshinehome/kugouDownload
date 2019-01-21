@@ -41,35 +41,6 @@ def geturl():
     return result_url
 
 
-#显示搜索结果
-# def show_results(url):
-#     driver = webdriver.Chrome(executable_path="D:\Tools\Python\chromedriver.exe")
-#     driver.get(url)
-#     time.sleep(3)
-#     for i in range(1,1000):
-#         try:
-#             print('%d. '%i + driver.find_element_by_xpath(".//*[@id='search_song']/div[2]/ul[2]/li[%d]/div[1]/a"%i).get_attribute('title')) #获取歌曲名
-#         except NoSuchElementException as msg:
-#             break
-#     choice = input(">>>选择你想要下载的编号，全部下载请输入'All'(返回搜索请输入 'quit'):")
-#     if choice == 'quit':   #从下载界面退回
-#         result = 'quit'
-#     if choice == 'quit':  # 从下载界面退回
-#         result = 'quit'
-#     if choice.count()==2 :
-#         global mname
-#         mname = driver.find_element_by_xpath(".//*[@id='search_song']/div[2]/ul[2]/li[%d]/div/a"%int(choice)).get_attribute('title')
-#         a = driver.find_element_by_xpath(".//*[@id='search_song']/div[2]/ul[2]/li[%d]/div/a"%int(choice))
-#         actions = ActionChains(driver)
-#         actions.move_to_element(a)
-#         actions.click(a)
-#         actions.perform()
-#         #wait(driver)
-#         driver.switch_to_window(driver.window_handles[1])  #跳转到新打开的页面
-#         result = driver.find_element_by_xpath(".//*[@id='myAudio']").get_attribute('src') #获取播放元文件url
-#         # driver.quit()
-#     return result
-
 def show_results(url,lent):
     driver = webdriver.Chrome(executable_path="D:\Tools\Python\chromedriver.exe")
     driver.get(url)
